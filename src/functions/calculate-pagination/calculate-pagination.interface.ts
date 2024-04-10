@@ -1,4 +1,4 @@
-export declare namespace IPaginationCalculator {
+export declare namespace ICalculatePagination {
   export interface Params {
     currentPage: number;
     totalCount: number;
@@ -12,16 +12,19 @@ export declare namespace IPaginationCalculator {
   }
 
   export interface PaginationInfo {
-    currentPage: number;
+    currentPageItem: PageItem;
     pageItems: PageItem[];
 
-    prevPageItem: PageItem;
+    prevDisplayLastPageItem: PageItem;
     bestPrevPageItem: PageItem;
 
-    nextPageItem: PageItem;
+    nextDisplayFirstPageItem: PageItem;
     bestNextPageItem: PageItem;
 
     isFirstPage: boolean;
     isLastPage: boolean;
+
+    isFirstPagesDisplay: boolean;
+    isLastPagesDisplay: boolean;
   }
 }
